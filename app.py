@@ -81,8 +81,8 @@ if st.button('Predict'):
     query.append(ans[0])
     print(query)
 
-    conn = psycopg2.connect(host='annamalai.crhq093vjbni.ap-south-1.rds.amazonaws.com', dbname='postgres',
-                        user='postgres', password='9894056344')
+    conn = psycopg2.connect(host='localhost', dbname='postgres',
+                        user='postgres', password='admin123')
     cursor = conn.cursor()
 
     cursor.execute("""SELECT relname FROM pg_class WHERE relkind='r'
